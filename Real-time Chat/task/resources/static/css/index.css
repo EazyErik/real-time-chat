@@ -1,0 +1,135 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+#chat {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 20%;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+#users {
+    list-style-type: none;
+    padding: 0;
+    overflow-y:auto;
+
+}
+
+#user-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#user-list li:hover {
+    background-color: #eaeaea;
+}
+
+#messages-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#input-msg {
+    width: calc(100% - 100px);
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#send-msg-btn {
+    width: 80px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+/* Message container */
+#messages {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 80%;
+    margin: 10px 0;
+    overflow-y: auto; /* Enables scrolling */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual message bubbles */
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    clear: both;
+    text-align: left;
+    float: left;
+}
+
+
+
+/* Input message area */
+#input-msg {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    height: 50px;
+}
+
+/* Send button */
+#send-msg-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Button hover effect */
+#send-msg-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ensures the chat messages always stay visible when they exceed the height */
+html, body {
+    height: 100%;
+}
+
+/* Makes the message container grow and stay scrollable */
+#messages {
+    flex-grow: 1;
+}
